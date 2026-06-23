@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>THE DOJA GARDEN</title>
+    <style>
+        body { background-color: #000; color: #d4af37; font-family: sans-serif; padding: 20px; text-align: center; }
+        .hidden { display: none; }
+        .category { margin-top: 30px; font-weight: bold; border-bottom: 2px solid #d4af37; padding-bottom: 10px; font-size: 22px; }
+        .item { margin: 15px 0; border: 1px solid #d4af37; padding: 10px; }
+        .gallery-img { width: 100%; max-width: 300px; margin: 10px 0; border: 1px solid #d4af37; }
+        button { background-color: #d4af37; border: none; padding: 10px; cursor: pointer; color: #000; font-weight: bold; margin: 5px; }
+    </style>
+</head>
+<body>
+
+    <!-- Main Store -->
+    <div id="store-section">
+        <h1>THE DOJA GARDEN</h1>
+        <button onclick="showGallery()">View Pictures</button>
+        <button onclick="toggleCart()">Cart</button>
+
+        <div class="category">GREENHOUSE</div>
+        <div class="item">Skywalker OG (0.5G) - R50 <button onclick="addToCart('Skywalker OG (0.5G)', 50)">Add</button></div>
+        <div class="item">Skywalker OG (1G) - R80 <button onclick="addToCart('Skywalker OG (1G)', 80)">Add</button></div>
+        <div class="item">Cheese (0.5G) - R50 <button onclick="addToCart('Cheese (0.5G)', 50)">Add</button></div>
+        <div class="item">Cheese (1G) - R80 <button onclick="addToCart('Cheese (1G)', 80)">Add</button></div>
+
+        <div class="category">AAA INDOOR</div>
+        <div class="item">Isaiah (0.5G) - R60 <button onclick="addToCart('Isaiah (0.5G)', 60)">Add</button></div>
+        <div class="item">Isaiah (1G) - R100 <button onclick="addToCart('Isaiah (1G)', 100)">Add</button></div>
+
+        <div class="category">PRE-ROLLS</div>
+        <div class="item">El pancho/ Wifi joints - R80 <button onclick="addToCart('El pancho/ Wifi joints', 80)">Add</button></div>
+
+        <div class="category">SHROOMS</div>
+        <div class="item">Albino penis envy (1G) - R100 <button onclick="addToCart('Albino penis envy (1G)', 100)">Add</button></div>
+
+        <br><button onclick="adminLogin()">Settings</button>
+    </div>
+
+    <!-- Gallery Section -->
+    <div id="gallery-section" class="hidden">
+        <h1>Our Strains</h1>
+        <img src="path_to_skywalker.jpg" class="gallery-img" alt="Skywalker OG">
+        <img src="path_to_shrooms.jpg" class="gallery-img" alt="Albino Penis Envy">
+        <br><button onclick="showStore()">Continue Shopping</button>
+    </div>
+
+    <!-- Cart & Admin -->
+    <div id="cart-section" class="hidden">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <button onclick="checkout()">Checkout Now</button>
+        <button onclick="showStore()">Back to Store</button>
+    </div>
+
+    <div id="admin-panel" class="hidden">
+        <h2>Admin Dashboard</h2>
+        <input type="text" id="rowInput" placeholder="Row ID">
+        <button onclick="cancelOrder(document.getElementById('rowInput').value)">Cancel Order</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
