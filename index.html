@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>THE DOJA GARDEN</title>
+    <style>
+        body { background-color: #000; color: #d4af37; font-family: sans-serif; padding: 20px; text-align: center; }
+        .hidden { display: none; }
+        .category { margin-top: 30px; font-weight: bold; border-bottom: 2px solid #d4af37; padding-bottom: 10px; font-size: 24px; }
+        .item { margin: 20px 0; border: 1px solid #d4af37; padding: 10px; }
+        .item img { width: 100%; max-width: 300px; border-radius: 5px; }
+        button { background-color: #d4af37; border: none; padding: 10px 20px; cursor: pointer; color: #000; font-weight: bold; margin: 5px; }
+        .nav { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <button onclick="showSection('store')">Menu</button>
+        <button onclick="toggleCart()">Cart</button>
+    </div>
+
+    <div id="store">
+        <h1>THE DOJA GARDEN</h1>
+        <div class="category">GREENHOUSE</div>
+        <div class="item">
+            <img src="https://via.placeholder.com/300" alt="Skywalker OG">
+            <p>Skywalker OG (0.5G) - R50</p>
+            <button onclick="addToCart('Skywalker OG (0.5G)', 50)">Add</button>
+        </div>
+        <!-- Add more items here following the same structure -->
+        <button onclick="adminLogin()">Settings</button>
+    </div>
+
+    <div id="cart-section" class="hidden">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <button onclick="checkout()">Checkout Now</button>
+    </div>
+
+    <div id="admin-panel" class="hidden">
+        <h2>Admin Dashboard</h2>
+        <input type="text" id="cancelInput" placeholder="Enter Order Row ID">
+        <button onclick="cancelOrder(document.getElementById('cancelInput').value)">Cancel Order</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
