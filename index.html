@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>THE DOJA GARDEN</title>
+    <style>
+        body { background-color: #000; color: #d4af37; font-family: sans-serif; padding: 20px; }
+        .hidden { display: none; }
+        .category { margin-top: 20px; font-weight: bold; border-bottom: 1px solid #d4af37; padding-bottom: 5px; }
+        .item { display: flex; justify-content: space-between; margin: 10px 0; }
+        button { background-color: #d4af37; border: none; padding: 5px 10px; cursor: pointer; color: #000; font-weight: bold; }
+        h1 { text-align: center; }
+    </style>
+</head>
+<body>
+
+    <div id="store">
+        <h1>THE DOJA GARDEN</h1>
+        
+        <!-- Greenhouse -->
+        <div class="category">GREENHOUSE</div>
+        <div class="item"><span>Skywalker OG (0.5G)</span> <button onclick="addToCart('Skywalker OG (0.5G)', 50)">R50</button></div>
+        <div class="item"><span>Skywalker OG (1G)</span> <button onclick="addToCart('Skywalker OG (1G)', 80)">R80</button></div>
+        <div class="item"><span>Cheese (0.5G)</span> <button onclick="addToCart('Cheese (0.5G)', 50)">R50</button></div>
+        <div class="item"><span>Cheese (1G)</span> <button onclick="addToCart('Cheese (1G)', 80)">R80</button></div>
+
+        <!-- AAA Indoor -->
+        <div class="category">AAA INDOOR</div>
+        <div class="item"><span>Isaiah (0.5G)</span> <button onclick="addToCart('Isaiah (0.5G)', 60)">R60</button></div>
+        <div class="item"><span>Isaiah (1G)</span> <button onclick="addToCart('Isaiah (1G)', 100)">R100</button></div>
+
+        <!-- Pre-Rolls -->
+        <div class="category">PRE-ROLLS</div>
+        <div class="item"><span>El pancho/ Wifi joints</span> <button onclick="addToCart('El pancho/ Wifi joints', 80)">R80</button></div>
+
+        <!-- Shrooms -->
+        <div class="category">SHROOMS</div>
+        <div class="item"><span>Albino penis envy (1G)</span> <button onclick="addToCart('Albino penis envy (1G)', 100)">R100</button></div>
+
+        <br>
+        <button onclick="toggleCart()">View Cart</button>
+        <button onclick="adminLogin()">Settings</button>
+    </div>
+
+    <!-- Cart Section -->
+    <div id="cart-section" class="hidden">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <button onclick="checkout()">Checkout Now</button>
+        <button onclick="toggleCart()">Back to Store</button>
+    </div>
+
+    <!-- Ghost Admin Portal -->
+    <div id="admin-panel" class="hidden">
+        <h2>Admin Dashboard</h2>
+        <button onclick="cancelOrder(prompt('Enter the exact Item name/list to cancel:'))">Cancel Order</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
