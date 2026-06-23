@@ -1,6 +1,0 @@
-body { background: #0a0a0a; color: #d4af37; font-family: sans-serif; margin: 0; }
-.cart-nav { position: sticky; top: 0; background: #1a1a1a; padding: 15px; display: flex; gap: 10px; justify-content: center; }
-.product-row { display: flex; justify-content: space-between; padding: 15px; border-bottom: 1px solid #333; }
-button { background: #d4af37; border: none; padding: 10px; cursor: pointer; font-weight: bold; }
-.hidden { display: none !important; }
-#cart-section, #modal { padding: 20px; text-align: center; }
