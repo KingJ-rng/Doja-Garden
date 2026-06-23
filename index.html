@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doja Garden Store</title>
+    <style>
+        .hidden { display: none; }
+        body { font-family: sans-serif; padding: 20px; }
+    </style>
+</head>
+<body>
+
+    <!-- Storefront Section -->
+    <div id="store">
+        <h1>Doja Garden</h1>
+        <button onclick="addToCart('Skywalker OG', 50)">Add Skywalker OG (R50)</button>
+        <button onclick="toggleCart()">View Cart</button>
+        <button onclick="adminLogin()">Settings</button>
+    </div>
+
+    <!-- Cart Section -->
+    <div id="cart-section" class="hidden">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <button onclick="checkout()">Checkout Now</button>
+        <button onclick="toggleCart()">Back to Store</button>
+    </div>
+
+    <!-- Ghost Admin Portal -->
+    <div id="admin-panel" class="hidden">
+        <h2>Admin Dashboard</h2>
+        <button onclick="cancelOrder(prompt('Enter the exact Item name/list to cancel:'))">Cancel Order</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+ 
