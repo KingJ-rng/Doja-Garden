@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE DOJA GARDEN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="cart-nav">
+        <button onclick="viewCart()">View Cart</button>
+        <button onclick="checkout()">Checkout</button>
+    </header>
+
+    <main>
+        <h1>THE DOJA GARDEN</h1>
+        
+        <!-- Full Price List -->
+        <div id="menu">
+            <h3>GREENHOUSE</h3>
+            <div class="product-row"><span>Skywalker OG (0.5G)</span><button onclick="addToCart('Skywalker OG 0.5G', 50)">R50</button></div>
+            <div class="product-row"><span>Skywalker OG (1G)</span><button onclick="addToCart('Skywalker OG 1G', 80)">R80</button></div>
+            <div class="product-row"><span>Cheese (0.5G)</span><button onclick="addToCart('Cheese 0.5G', 50)">R50</button></div>
+            <div class="product-row"><span>Cheese (1G)</span><button onclick="addToCart('Cheese 1G', 80)">R80</button></div>
+            
+            <h3>AAA INDOOR</h3>
+            <div class="product-row"><span>Isaiah (0.5G)</span><button onclick="addToCart('Isaiah 0.5G', 60)">R60</button></div>
+            <div class="product-row"><span>Isaiah (1G)</span><button onclick="addToCart('Isaiah 1G', 100)">R100</button></div>
+
+            <h3>PRE-ROLLS</h3>
+            <div class="product-row"><span>El pancho/ Wifi joints</span><button onclick="addToCart('El pancho/ Wifi joints', 80)">R80</button></div>
+
+            <h3>SHROOMS</h3>
+            <div class="product-row"><span>Albino penis envy (1G)</span><button onclick="addToCart('Albino penis envy 1G', 100)">R100</button></div>
+        </div>
+
+        <!-- Cart View Section -->
+        <div id="cart-section" class="hidden">
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <button onclick="checkout()">Checkout Now</button>
+        </div>
+    </main>
+
+    <div id="modal" class="hidden">
+        <p>Item Added!</p>
+        <button onclick="closeModal()">Keep Shopping</button>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+ 
