@@ -1,0 +1,8 @@
+body { background-color: #000; color: #d4af37; font-family: sans-serif; padding: 20px; }
+h1, h3 { text-align: center; color: #d4af37; }
+.cart-nav { display: flex; justify-content: space-around; padding: 10px; border-bottom: 2px solid #d4af37; }
+.product-row { display: flex; justify-content: space-between; align-items: center; margin: 15px 0; border: 1px solid #333; padding: 10px; }
+button { background-color: #d4af37; color: #000; border: none; padding: 10px 15px; cursor: pointer; font-weight: bold; }
+.hidden { display: none !important; }
+#admin-panel { padding: 20px; background: #111; text-align: center; border: 1px solid #d4af37; }
+#cart-items { margin: 20px 0; }
